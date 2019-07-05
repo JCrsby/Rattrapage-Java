@@ -12,7 +12,7 @@ import javax.swing.JPanel;
 /**
  * The Class ViewPanel.
  *
- * @author Jean-Aymeric Diet
+ * @author jeremy
  */
 class ViewPanel extends JPanel implements Observer {
 
@@ -70,23 +70,30 @@ class ViewPanel extends JPanel implements Observer {
 	 */
 	@Override
 	protected void paintComponent(final Graphics graphics) {
+		long t = System.currentTimeMillis();
 		super.paintComponent(graphics);
 		try {																					//load the images in the whole map
 			for(int y=0; y < this.getViewFrame().getModel().getMap().getHeight(); y++)
 			{
 				for(int x=0; x < this.getViewFrame().getModel().getMap().getWidth(); x++)
 				{
-					this.getViewFrame().getModel().getMap().getOnTheMap()[x][y].getSprite().loadImage();
+					if(!(this.getViewFrame().getModel().getMap().getOnTheMap()[x][y].getSprite().isImageLoaded())) {
+						this.getViewFrame().getModel().getMap().getOnTheMap()[x][y].getSprite().loadImage();
+					}
+						
+//					System.out.println(x+"/"+this.getViewFrame().getModel().getMap().getWidth()+" | "+y+"/"+this.getViewFrame().getModel().getMap().getHeight());
 				}
 			}
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+		System.out.println("---------------------------");
 		for(int y=0; y < this.getViewFrame().getModel().getMap().getHeight(); y++)			//Draw the images in the whole map	
 		{
 			for(int x=0; x < this.getViewFrame().getModel().getMap().getWidth(); x++)
 			{
+				//System.out.println(x+"/"+this.getViewFrame().getModel().getMap().getWidth()+" | "+y+"/"+this.getViewFrame().getModel().getMap().getHeight());
 				graphics.drawImage(this.getViewFrame().getModel().getMap().getOnTheMap()[x][y].getSprite().getImage(), x*16, y*16, this);
 			}
 		}
@@ -98,8 +105,8 @@ class ViewPanel extends JPanel implements Observer {
 		}*/
 
 		//System.out.println("Je me nomme Jeremy");
+		System.out.println("Temps passé : "+(System.currentTimeMillis()-t)+" ms !");
 		
 	}
-	
 
 }

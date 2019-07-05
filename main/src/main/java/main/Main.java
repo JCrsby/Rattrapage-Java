@@ -1,7 +1,3 @@
-/**
- * @author Jean-Aymeric DIET jadiet@cesi.fr
- * @version 1.0
- */
 package main;
 
 import contract.ControllerOrder;
@@ -12,7 +8,7 @@ import view.View;
 /**
  * The Class Main.
  *
- * @author Jean-Aymeric Diet
+ * @author jeremy
  */
 public abstract class Main {
 

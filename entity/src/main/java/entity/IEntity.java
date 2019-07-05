@@ -2,6 +2,12 @@ package entity;
 
 import java.awt.Image;
 
+/**
+ * The Interface IEntity.
+ * 
+ * @author jeremy
+ *
+ */
 public interface IEntity  {
 
     /**

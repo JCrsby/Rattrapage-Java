@@ -2,6 +2,12 @@ package entity;
 
 import entity.Sprite;
 
+/**
+ * The Class JetTrails.
+ * 
+ * @author jeremy
+ *
+ */
 public class JetTrails extends Entity{
 
 	private static final Sprite ORANGESPRITE = new Sprite('O',"jetTrails_orange.png");

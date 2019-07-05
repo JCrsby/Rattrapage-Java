@@ -7,6 +7,8 @@ import contract.IView;
 
 /**
  * The Class Controller.
+ * 
+ * @author jeremy
  */
 public final class Controller implements IController {
 
@@ -16,13 +18,13 @@ public final class Controller implements IController {
 	/** The model. */
 	private IModel	model;
 
-	private int firstLightCycleX = 0;
+	private int firstLightCycleX = 1;
 	
-	private int firstLightCycleY = 0;
+	private int firstLightCycleY = 1;
 	
-	private int secondLightCycleX = 400;
+	private int secondLightCycleX = 35;
 	
-	private int secondLightCycleY = 600;
+	private int secondLightCycleY = 21;
 	
 	/**
 	 * Instantiates a new controller.

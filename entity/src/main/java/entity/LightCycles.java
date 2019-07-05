@@ -1,5 +1,11 @@
 package entity;
 
+/**
+ * The Class LightCycles.
+ * 
+ * @author jeremy
+ *
+ */
 public class LightCycles extends Entity{
 
 	private static final Sprite REDSPRITE = new Sprite('R',"lightcycle_red.png");

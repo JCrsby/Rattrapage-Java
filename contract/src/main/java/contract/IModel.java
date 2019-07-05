@@ -7,7 +7,7 @@ import entity.Map;
 /**
  * The Interface IModel.
  *
- * @author Jean-Aymeric Diet
+ * @author jeremy
  */
 public interface IModel {
 

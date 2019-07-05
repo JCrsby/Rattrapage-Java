@@ -9,19 +9,19 @@ import entity.Map;
 /**
  * The Class Model.
  *
- * @author Jean-Aymeric Diet
+ * @author jeremy
  */
 public final class Model extends Observable implements IModel {
 
 	/** The helloWorld. */
 	private Map map;
 
-//	/**
-//	 * Instantiates a new model.
-//	 */
-//	public Model() {
-//		this.map = new Map(600, 400);
-//	}
+	/**
+	 * Instantiates a new model.
+	 */
+	public Model() {
+		this.map = new Map(37, 23);
+	}
 
 	/**
      * Gets the hello world.
@@ -62,7 +62,7 @@ public final class Model extends Observable implements IModel {
 	 */
 	public void loadMap() {
 		
-		this.setMap(new Map(600, 400));
+		this.setMap(new Map(37, 23));
 	}
 
 	/**

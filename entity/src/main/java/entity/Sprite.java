@@ -6,6 +6,12 @@ import java.io.IOException;
 
 import javax.imageio.ImageIO;
 
+/**
+ * The Class Sprite.
+ * 
+ * @author jeremy
+ *
+ */
 public class Sprite {
 
     /** The image. */
@@ -51,6 +57,7 @@ public class Sprite {
      */
     public final void loadImage() throws IOException {
         this.setImage(ImageIO.read(new File("..\\images\\" + this.getImageName())));
+        this.setImageLoaded(true);
         
     }
 

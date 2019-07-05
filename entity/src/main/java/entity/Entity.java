@@ -2,6 +2,12 @@ package entity;
 
 import java.awt.Image;
 
+/**
+ * The Abstract Class Entity.
+ * 
+ * @author jeremy
+ *
+ */
 public abstract class Entity implements IEntity {
     
 
