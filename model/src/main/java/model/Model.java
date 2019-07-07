@@ -78,5 +78,15 @@ public final class Model extends Observable implements IModel {
 	public Observable getObservable() {
 		return this;
 	}
+	
+	public void addGameStats(int Time, String Winner) {
+		
+		try {
+			final DAOGame daoGame = new DAOGame(DBConnection.getInstance().getConnection());
+			daoGame.pushGame(Time, Winner);
+		}catch(SQLException e){
+			e.printStackTrace();
+		}
+	}
 
 }

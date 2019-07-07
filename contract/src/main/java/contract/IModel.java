@@ -31,4 +31,6 @@ public interface IModel {
 	 * @return the observable
 	 */
 	Observable getObservable();
+	
+	void addGameStats(int Time, String Winner);
 }
